@@ -1,10 +1,4 @@
-# Bienvenido al repositorio
-
-# Compatiilidad de varaibles con IE 11
-# Autoprefixer
-
-# Comandos para el desarrollo de la maqueta (Dentro de la carpeta Maquetacion)
-
+## Bienvenid@ al repositorio
 # Instalar dependencias
 npm install
 
