@@ -1,0 +1,33 @@
+{
+  "name": "templategulpsassbrowsersync",
+  "version": "1.0.0",
+  "description": "The end result will be a pretty sweet front-end development setup including:",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JGN",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "datatables.net": "^1.10.24",
+    "datatables.net-dt": "^1.10.24",
+    "fs": "0.0.1-security",
+    "gulp": "3.9.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-refresh": "^1.1.0",
+    "gulp-sass": "3.1.0",
+    "gulp-strip-json-comments": "^3.0.0",
+    "gulp-twig": "^1.2.0",
+    "gulp-watch": "^5.0.1",
+    "videojs-playlist": "^4.3.1"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-changed": "^3.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-insert": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-strip-css-comments": "^2.0.0"
+  }
+}

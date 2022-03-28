@@ -1,0 +1,44 @@
+:root {
+   $finsa-container: 1442px;
+   --finsa-container: 1442px;
+  --finsa-mobile-bp: 992px;
+
+  /* GENERIC  */
+  --finsa-color-text: #2E2E2E;
+
+
+  /* CUSTOM THEME */
+
+  --finsa-font-family01: "Helvetica Neue";
+
+
+  // GENERICAS
+
+  .row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    &>[class^="col-"],
+    &>[class*=" col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  html {
+
+
+  
+
+  }
+
+  body{
+    background-color: white;
+  }
+
+}
+
+
+@import "../../_scss/utilities/reset.scss";
+@import "../../_scss/utilities/fonts.scss";
+@import "../../_scss/utilities/general.scss";

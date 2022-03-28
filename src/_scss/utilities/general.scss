@@ -1,0 +1,149 @@
+// GENÉRICAS
+
+$mobile-min-bp: 991px;
+
+.clear-both{
+  float: none;
+  clear: both;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.hide-in-mobile {
+  @media only screen and (max-width: $mobile-min-bp) {
+    display: none !important;
+  }
+}
+
+.hide-in-desktop {
+  @media only screen and (min-width: $mobile-min-bp+1) {
+    display: none !important;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.dblock {
+  display: block !important;
+}
+
+
+.w-100{
+  width: 100%;
+}
+
+.w-60{
+  width: 60%;
+}
+
+.w-40{
+  width: 40%;
+}
+
+.w-50{
+  width: 50%;
+}
+
+.finsa-bg-gray{
+  background: #E5E5E5;
+}
+.finsa-combo{
+  border: none;
+  cursor: pointer;
+
+  &:hover, &:active, &:focus{
+    border: none;
+    outline: none;
+  }
+}
+
+.finsa-view-more-down{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 26px;
+  font-family: var(--finsa-font-family01);
+  text-align: center;
+  color: #CE0E2D;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  height: 50px;
+}
+
+.finsa-view-more-inline {
+     
+  font-family: var(--finsa-font-family01);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #CE0E2D;
+  display: flex;
+  align-items: center;
+  padding-right: 90px;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+
+  @media screen and (max-width: 991px) {
+      padding-right: 20px;
+  
+
+  }
+
+  &:hover{
+    color: #CE0E2D;
+  }
+
+  img{
+      margin-left: 20px;
+  }
+    
+ 
+}
+
+.finsa-line-link {
+
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: all 0.4s ease-in;
+
+  &.finsa-line-link-left{
+    justify-content: flex-start;
+  }
+  .finsa-link {
+      font-family: var(--finsa-font-family01);
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      color: #CE0E2D;
+      padding: 10px 5px;
+      transition: all 0.4s ease-in;
+  }
+
+  &:hover{
+    .finsa-link{
+      padding-left: 25px;
+    }
+  }
+  img{
+    width: 40px!important;
+  }
+
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover{
+
+  background-color: transparent;
+}

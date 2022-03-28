@@ -1,0 +1,13 @@
+node_modules
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.sass-cache
+/.sass-cache
+*.psd
+/.vscode
+*.sketch
+.history

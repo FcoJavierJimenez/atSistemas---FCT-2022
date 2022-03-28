@@ -1,0 +1,354 @@
+
+	<!doctype html>
+	<html lang="es">
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+
+			<title>OFERTA WEB AT</title>
+
+			<style>:root
+				{
+					--colorfondo: #0583F2;
+					--fontColor: #022873;
+					--sombra: 0 0 20px var(--fontColor);
+					--colorTitulo: #F2F2F2;
+					--weightTitulo: 600;
+					--colorGradient1: #0455BF;
+					
+				}
+				*{
+					padding: 0px;
+					margin: 0px;
+				}
+	
+	
+				body {
+					overflow-x: hidden;
+				/*	background: linear-gradient(to top, var(--colorGradient1), var(--colorfondo));*/
+					color: var(--fontColor);
+				}
+	
+				.logo{
+					background-color: rgb(40,40,40);
+			   /*     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px; */
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					position: sticky;
+					top: 0;
+					z-index: 999;
+					padding: 10px 0;
+				}
+				
+				.logo > img{
+					width: 40%;
+					max-width: 250px;
+				}
+			
+				.index-doc {
+					max-width: 768px;
+					margin: 0 auto;
+					padding: 15px;
+					font: 300 16px / 1.4 "Poppins", sans-serif;
+					margin-top: 2em;
+				}
+				.index-doc h1 {
+					letter-spacing: -1px;
+					font-weight: var(--weightTitulo);
+					/*color: var(--colorTitulo);*/
+	
+				}
+				.index-doc h3 {
+					font-weight: var(--weightTitulo);
+					/*color: var(--colorTitulo);*/
+				}
+				.index-doc a {
+					color: rgb(34, 25, 88);
+					text-decoration: none;
+				}
+				.index-doc a:hover {
+					text-decoration: underline;
+				}
+				.index-doc ol,
+				.index-doc ul {
+					margin: 1em 0;
+					padding: 12px 15px 1px 35px;
+				}
+				.index-doc > ol,
+				.index-doc > ul {
+					padding-right: 75px;
+					border-radius: 6px;
+					background: #f0f3f6;
+				}
+				.index-doc ol ol {
+					margin: 1em 0 5px;
+					padding: 0 0 1px 20px;
+				}
+				.index-doc li {
+					padding-bottom: 0.5em;
+				}
+				.index-doc li .group {
+					font-weight: 500;
+					text-transform: uppercase;
+				}
+				.index-doc li li .group {
+					text-transform: none;
+				}
+				.index-doc li.task {
+					padding-left: 55px;
+				}
+				.index-doc li.task > p {
+					display: inline-block;
+					position: relative;
+					vertical-align: middle;
+					right: -47px;
+					width: 100%;
+					margin: 0 0 0 -50px;
+				}
+				.index-doc li.task > p a {
+					float: left;
+					overflow: hidden;
+				}
+				.index-doc li.task > p > span {
+					display: block;
+					overflow: hidden;
+					border-bottom: 1px dotted #ccc;
+					text-align: right;
+				}
+				.index-doc li.task:before {
+					content: "-";
+					display: inline-block;
+					vertical-align: middle;
+					width: 45px;
+					margin: -2px 2px 0 -52px;
+					padding: 2px 0;
+					border-radius: 2px;
+					font: bold 10px / 15px Arial, Helvetica, sans-serif;
+					text-align: center;
+					text-transform: lowercase;
+					color: #fff;
+				}
+	
+				#toc {
+				 /*	box-shadow: 0 0 20px var(--fontColor); */
+				}
+	
+				/*
+					LEGEND
+				*/
+	
+				#legend {
+					padding-bottom: 15px;
+					 /*	box-shadow: 0 0 20px var(--fontColor); */
+				}
+	
+	
+				/* AVAILABLE STATUS */
+	
+	
+				.index-doc li.task:before {
+					content: "task";
+					background: #b0c4de;
+				} /* task */
+				.index-doc li.RD:before {
+					content: "I+D";
+					background: lime;
+				} /* LABS, Research & Development */
+				.index-doc li.standby:before {
+					content: "standby";
+					background: #ffa500;
+				} /* standby */
+				.index-doc li.in-progress:before {
+					content: "I.P...";
+					background: #00ced1;
+				} /* in progress */
+				.index-doc li.validation:before {
+					content: "validate";
+					background: #008000;
+				} /* pending validation */
+				.index-doc li.validation:before {
+					color: #adff2f;
+				}
+				.index-doc li.done:before {
+					content: "Done !";
+					background: #32cd32;
+				} /* done! */
+				.index-doc li.evolve:before {
+					content: "evo";
+					background: #a9a9a9;
+				} /* Evolve */
+				.index-doc li.attention:before {
+					content: "att !!";
+					background: #ff6347;
+				} /* attention required */
+	
+				/* OTHER */
+	
+				.index-doc li.bonus,
+				.index-doc li.additions,
+				.index-doc li.changed,
+				.index-doc li.redo,
+				.index-doc li.nodef,
+				.index-doc li.wtf {
+					position: relative;
+				}
+	
+				.index-doc li.bonus:after,
+				.index-doc li.additions:after,
+				.index-doc li.changed:after,
+				.index-doc li.redo:after,
+				.index-doc li.nodef:after,
+				.index-doc li.wtf:after,
+				.index-doc li.rel a:after,
+				.index-doc li.new a:after,
+				.index-doc li.aux a:after {
+					vertical-align: top;
+					padding: 2px 5px;
+					font: bold 10px / 10px Arial, Helvetica, sans-serif;
+				}
+	
+				.index-doc li.bonus:after,
+				.index-doc li.additions:after,
+				.index-doc li.changed:after,
+				.index-doc li.redo:after,
+				.index-doc li.nodef:after,
+				.index-doc li.wtf:after {
+					position: absolute;
+					left: 100%;
+					top: 0;
+					margin: 0 10px;
+				}
+				.index-doc li.rel a:after,
+				.index-doc li.new a:after,
+				.index-doc li.aux a:after {
+					display: inline-block;
+					vertical-align: top;
+					margin: 0 5px;
+				}
+	
+				/* labels */
+				.index-doc li.bonus:after {
+					background: #9400d3;
+					color: #fff;
+					content: "BONUS";
+				} /* Bonus */
+				.index-doc li.additions:after {
+					background: #90ee90;
+					color: #fff;
+					content: "EXTRAS";
+				} /* Additions */
+				.index-doc li.changed:after {
+					background: #ff0000;
+					color: #fff;
+					content: "changed!";
+				} /* Changed ! */
+				.index-doc li.redo:after {
+					background: #ff0000;
+					color: #fff;
+					content: "ReDo";
+				} /* ReDo */
+				.index-doc li.nodef:after {
+					background: #ffe010;
+					color: #000;
+					content: "nodef";
+				} /* nodef */
+				.index-doc li.wtf:after {
+					background: #990000;
+					color: #fff;
+					content: "WTF!?";
+				} /* WTF!#?& */
+				.index-doc li.rel a:after {
+					background: #0000ff;
+					color: #fff;
+					content: "rel";
+				} /* rel */
+				.index-doc li.new a:after {
+					background: #ff4500;
+					color: #fff;
+					content: "new";
+				} /* new */
+				.index-doc li.aux a:after {
+					background: #ffe010;
+					color: #fff;
+					content: "AUX";
+				} /* auxiliar */
+				.index-doc .notes {
+					display: block;
+					font-weight: 300;
+					font-size: 0.8em;
+				}
+	
+				@media(max-width: 768px) {
+					
+	
+				}
+			</style>
+	</head>
+	<body style="background:white;">
+		<div class="index-doc">
+			<h1 style="color: rgb(40,40,40)">DETALLE OFERTA WEB ATSISTEMAS</h1>
+			<ol id="toc">
+				
+					<li>
+						<p class="group">Páginas</p>
+						<ol>
+							
+								
+									<li class="task in-progress">
+										<a href="modules/pages/offers-list.html" class="icon icon icon-html icon-text-html" title="Listado ofertas">
+											<span class="name">Listado ofertas</span>
+										</a>
+										<span class="notes"></span>
+									</li>
+								
+							
+								
+									<li class="task in-progress">
+										<a href="modules/pages/offers-detail.html" class="icon icon icon-html icon-text-html" title="Detalle ofertas">
+											<span class="name">Detalle ofertas</span>
+										</a>
+										<span class="notes"></span>
+									</li>
+								
+							
+						</ol>
+					</li>
+				
+			</ol>
+<!-- 
+			<h3 style="color: rgb(40,40,40)">Leyenda</h3>
+			<ol id="legend">
+				<li class="task">
+					Tarea
+					<span class="notes">Notas</span>
+				</li>
+				<li class="task RD">Tarea en I+D y/o debug</li>
+				<li class="task standby">Tarea en standby, aplazada o sin definición</li>
+				<li class="task in-progress">Tarea en curso</li>
+				<li class="task validation">Tarea terminada que requiere revisión o validación</li>
+				<li class="task done">Tarea terminada</li>
+				<li class="task evolve">Tarea, terminada (o no), pero en evolución</li>
+				<li class="task attention">Tarea retrasada, que requiere atención inmediata, no estaba definida o es problemática</li>
+				<li class="task bonus">
+					<a>Bonus o tarea no esencial (mejora, alternativa, etc.)</a>
+				</li>
+				<li class="task additions">Tarea a la que se le han añadido más cosas o nuevas especificaciones</li>
+				<li class="task changed">Tarea que ha cambiado con respecto a un estado anterior</li>
+				<li class="task redo">Tarea que se ha tenido que rehacer</li>
+				<li class="task nodef">Pendiente diseño, especificación, etc.</li>
+				<li class="task wtf">Tarea WTF!... no se dispone suficente información, incongruente, etc.</li>
+				<li class="task rel">
+					<a href="">Tarea relacionada o equivalente a otra entrada. Requiere enlace</a>
+				</li>
+				<li class="task new">
+					<a href="">Tarea nueva (acepta cualquiera de los estados anteriores). Requiere enlace</a>
+				</li>
+				<li class="task aux">
+					<a href="">Tarea a la que sólo le faltan elementos auxiliares o retoques finales. Requiere enlace</a>
+				</li>
+			</ol> -->
+		</div>
+	</body>
+
+</html>
